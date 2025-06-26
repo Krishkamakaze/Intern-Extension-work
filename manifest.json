@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "Playwright Locator Picker",
+    "version": "1.0",
+    "description": "Inspect elements and get Playwright selector values.",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "popup.html"
+    },
+    
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["picklocator.js"],
+        "css": ["styles.css"]
+      }
+    ]
+  }
+  
